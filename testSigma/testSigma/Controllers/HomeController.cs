@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using testSigma.Models;
 
 namespace testSigma.Controllers
 {
@@ -10,7 +11,11 @@ namespace testSigma.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var webservice = new Webservice();
+            //var municioalityId = webservice.GetMunicipalityId("kalmar");
+            var kpi_groups = webservice.GetKpiGroups();
+
+            return View(kpi_groups);
         }
 
         public ActionResult About()
