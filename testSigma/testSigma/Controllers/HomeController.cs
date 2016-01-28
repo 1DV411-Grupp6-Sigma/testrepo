@@ -36,5 +36,14 @@ namespace testSigma.Controllers
 
             return View(m);
         }
+
+        public ActionResult Ou()
+        {
+            var ou = _webservice.GetOu();
+
+            return View(ou);
+        }
+
+
     }
 }

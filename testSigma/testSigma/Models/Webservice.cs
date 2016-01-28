@@ -80,7 +80,19 @@ namespace testSigma.Models
                        select new Municipality(c)).ToList();
 
             return muni;
-        } 
+        }
+
+        public IEnumerable<OU> GetOu()
+        {
+            var query = "municipality";
+
+            var content = JsonFetcher(query);
+
+            var ou = (from c in content.Values()
+                        select new OU(c)).ToList();
+
+            return ou;
+        }
 
 
     }

@@ -1,0 +1,30 @@
+﻿@model IEnumerable<testSigma.Models.OU>
+
+@{
+    ViewBag.Title = "Ou";
+}
+
+<h2>Ou</h2>
+<h3>FUNKAR INTE!</h3>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Count)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Next_page)
+        </th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Count)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Next_page)
+        </td>
+    </tr>
+}
+
+</table>
