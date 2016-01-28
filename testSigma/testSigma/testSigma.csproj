@@ -129,6 +129,7 @@
     </Compile>
     <Compile Include="Models\HTTPFetcher.cs" />
     <Compile Include="Models\KpiGroups.cs" />
+    <Compile Include="Models\MunicipalityGroups.cs" />
     <Compile Include="Models\Webservice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
