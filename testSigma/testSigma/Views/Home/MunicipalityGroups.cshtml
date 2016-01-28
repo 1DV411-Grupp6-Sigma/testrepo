@@ -1,0 +1,24 @@
+﻿@model IEnumerable<testSigma.Models.MunicipalityGroups>
+
+@{
+    ViewBag.Title = "MunicipalityGroups";
+}
+
+<h2>MunicipalityGroups</h2>
+
+<ul>
+    @foreach (var m in Model)
+    {
+        <li>
+            <strong>@m.Title</strong> @m.Id
+            <ul>
+                @for(var i = 0; i < m.Member_title.Count; i++)
+                {
+                    <li>
+                        @m.Member_title[i] <em>(@m.Member_id[i])</em>
+                    </li>
+                }
+            </ul>
+        </li>
+    }
+</ul>

@@ -52,11 +52,23 @@ namespace testSigma.Models
 
             var content = JsonFetcher(query);
 
-            var MunGroups = (from c in content["values"]
+            var munGroups = (from c in content["values"]
                              select new MunicipalityGroups(c)).ToList();
 
-            return MunGroups;
+            return munGroups;
         }
+
+        public IEnumerable<Kpi> GetKpi()
+        {
+            var query = "kpi";
+
+            var content = JsonFetcher(query);
+
+            var kpi = (from c in content["values"]
+                             select new Kpi(c)).ToList();
+
+            return kpi;
+        } 
 
 
     }

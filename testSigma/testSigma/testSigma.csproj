@@ -128,6 +128,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\HTTPFetcher.cs" />
+    <Compile Include="Models\Kpi.cs" />
     <Compile Include="Models\KpiGroups.cs" />
     <Compile Include="Models\MunicipalityGroups.cs" />
     <Compile Include="Models\Webservice.cs" />
@@ -168,6 +169,8 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Home\Kpi.cshtml" />
+    <Content Include="Views\Home\MunicipalityGroups.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

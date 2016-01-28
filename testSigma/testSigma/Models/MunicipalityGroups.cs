@@ -24,8 +24,8 @@ namespace testSigma.Models
             }
 
             foreach (var m in item["members"])
-            {
-                Member_title.Add(m["Member_title"].ToString());
+            { 
+                Member_title.Add(m["member_title"].ToString());
             }
         }
     }

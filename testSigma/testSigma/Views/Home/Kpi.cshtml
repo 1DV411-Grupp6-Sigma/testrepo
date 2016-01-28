@@ -1,0 +1,92 @@
+﻿@model IEnumerable<testSigma.Models.Kpi>
+
+@{
+    ViewBag.Title = "Kpi";
+}
+
+<h2>Kpi</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Auspices)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Has_ou_data)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Is_divided_by_gender)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Municipality_type)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Operating_area)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ou_publication_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Perspective)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prel_publication_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Publication_date)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Publ_period)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Title)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Auspices)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @item.Has_ou_data.ToString()
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Is_divided_by_gender)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Municipality_type)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Operating_area)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ou_publication_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Perspective)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prel_publication_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Publication_date)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Publ_period)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Title)
+        </td>
+        
+    </tr>
+}
+
+</table>
