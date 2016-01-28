@@ -68,6 +68,18 @@ namespace testSigma.Models
                              select new Kpi(c)).ToList();
 
             return kpi;
+        }
+
+        public IEnumerable<Municipality> GetMunicipality()
+        {
+            var query = "municipality";
+
+            var content = JsonFetcher(query);
+
+            var muni = (from c in content["values"]
+                       select new Municipality(c)).ToList();
+
+            return muni;
         } 
 
 

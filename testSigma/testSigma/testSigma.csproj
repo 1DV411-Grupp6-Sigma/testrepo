@@ -130,6 +130,7 @@
     <Compile Include="Models\HTTPFetcher.cs" />
     <Compile Include="Models\Kpi.cs" />
     <Compile Include="Models\KpiGroups.cs" />
+    <Compile Include="Models\Municipality.cs" />
     <Compile Include="Models\MunicipalityGroups.cs" />
     <Compile Include="Models\Webservice.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -166,11 +167,10 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
-    <Content Include="Views\Home\About.cshtml" />
-    <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\Kpi.cshtml" />
     <Content Include="Views\Home\MunicipalityGroups.cshtml" />
+    <Content Include="Views\Home\Municipality.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
