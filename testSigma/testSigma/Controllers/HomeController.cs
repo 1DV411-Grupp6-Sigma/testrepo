@@ -9,27 +9,25 @@ namespace testSigma.Controllers
 {
     public class HomeController : Controller
     {
+        private Webservice _webservice = new Webservice();
         public ActionResult Index()
         {
-            var webservice = new Webservice();
-            //var municioalityId = webservice.GetMunicipalityId("kalmar");
-            var kpi_groups = webservice.GetKpiGroups();
+            var kpi_groups = _webservice.GetKpiGroups();
 
             return View(kpi_groups);
         }
 
-        public ActionResult About()
+        public ActionResult Kpi()
         {
-            ViewBag.Message = "Your application description page.";
-
-            return View();
+            var kpi = _webservice.GetKpi();
+            return View(kpi);
         }
 
-        public ActionResult Contact()
+        public ActionResult MunicipalityGroups()
         {
-            ViewBag.Message = "Your contact page.";
+            var mg = _webservice.GetMunicipalityGroups();
 
-            return View();
+            return View(mg);
         }
     }
 }

@@ -44,8 +44,31 @@ namespace testSigma.Models
                 select new KpiGroups(c)).ToList();
 
             return kpiGroups;
-        } 
+        }
 
+        public IEnumerable<MunicipalityGroups> GetMunicipalityGroups()
+        {
+            var query = "municipality_groups";
+
+            var content = JsonFetcher(query);
+
+            var munGroups = (from c in content["values"]
+                             select new MunicipalityGroups(c)).ToList();
+
+            return munGroups;
+        }
+
+        public IEnumerable<Kpi> GetKpi()
+        {
+            var query = "kpi";
+
+            var content = JsonFetcher(query);
+
+            var kpi = (from c in content["values"]
+                             select new Kpi(c)).ToList();
+
+            return kpi;
+        } 
 
 
     }
