@@ -29,5 +29,12 @@ namespace testSigma.Controllers
 
             return View(mg);
         }
+
+        public ActionResult Municipality()
+        {
+            var m = _webservice.GetMunicipality();
+
+            return View(m);
+        }
     }
 }

@@ -5,14 +5,14 @@
 }
 
 <h2>MunicipalityGroups</h2>
-
+<button id="hideToggle" data-visable="true">Visa/Göm</button>
 <ul>
     @foreach (var m in Model)
     {
-        <li>
+        <li class="category">
             <strong>@m.Title</strong> @m.Id
-            <ul>
-                @for(var i = 0; i < m.Member_title.Count; i++)
+            <ul class="sub_category">
+                @for (var i = 0; i < m.Member_title.Count; i++)
                 {
                     <li>
                         @m.Member_title[i] <em>(@m.Member_id[i])</em>
@@ -22,3 +22,19 @@
         </li>
     }
 </ul>
+
+@section Scripts{
+    <script>
+        $(".category").hover(function() {
+            $(this).css('cursor', 'pointer');
+        });
+
+        $(".category").on('click', function() {
+            $(this).find("ul").slideToggle();
+        });
+
+        $("#hideToggle").on('click', function() {
+            $(".sub_category").slideToggle();
+        });
+    </script>
+}
